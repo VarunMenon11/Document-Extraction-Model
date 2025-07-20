@@ -21,6 +21,8 @@ It supports:
 
 Before training the model, you need annotated data. This project uses [**Label Studio**](https://labelstud.io/) — a powerful open-source data labeling tool that supports OCR and document annotation.
 
+*Note: The Dataset should be in pdf format.*
+
 ### 🔧 Install Label Studio
 ```bash
 pip install label-studio
@@ -84,6 +86,7 @@ Testing_Model.py → Inference + Post-Processing
 - Pillow
 - pytesseract (Tesseract OCR)
 - Label Studio (for annotation)
+- Streamlit
 
 ### Installation
 ```bash
@@ -142,11 +145,13 @@ This script:
 
 ---
 
-## 📁 Folder Structure
+## 
+
+## 📁 Final Folder Structure
 
 ```
 .
-├── Image_dataset/                  # Raw document images
+├── Image_dataset/                 # Raw document images
 ├── layoutlm_dataset/              # Preprocessed HuggingFace dataset
 ├── label2id_2.json                # Label mapping
 ├── TrainingData.py                # Label Studio to flat data converter
@@ -154,7 +159,6 @@ This script:
 ├── Model_training.py              # Fine-tuning LayoutLMv3
 ├── Testing_Model.py               # Inference + post-processing
 ├── exported_annotations.json      # Exported from Label Studio
-├── README.md                      # This file
 ```
 
 ---
